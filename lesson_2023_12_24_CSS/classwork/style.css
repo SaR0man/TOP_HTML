@@ -1,1 +1,29 @@
-.style_1 {color: darkorange;}
+.style_1 {
+    color: darkorange;
+    letter-spacing: 10px;
+    word-spacing: 50px;
+    text-align: right;
+}
+.style_2 {
+    color: saddlebrown;
+    background-color: blanchedalmond;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-shadow: 5px 2px 3px rgb(170, 170, 170);
+    line-height: 50px;
+}
+#id_1 {
+    color: blue;
+    background-color: bisque;
+    font-family: 'Rubik Scribble', Courier, monospace;
+    
+    }
+.box {
+    color: saddlebrown;
+    background-color: blanchedalmond;
+    width: 100px;
+    height: 100px;
+}
