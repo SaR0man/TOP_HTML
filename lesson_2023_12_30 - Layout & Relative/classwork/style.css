@@ -1,0 +1,31 @@
+div {
+    background-color: lightgreen;
+    width: 100px;
+    height: 100px;
+    border: 7px solid green;
+    margin: 10px;
+    font-size: 30px;
+
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    display: flex;
+    justify-content: space-around;
+    height: 500px;
+    /* align-items: center; */
+}
+
+.one {
+    background-color: lightgray;
+}
+
+.two {
+    background-color: darkgray;
+}
+
+.three {
+    background-color: gray;
+    order: -1;
+}
