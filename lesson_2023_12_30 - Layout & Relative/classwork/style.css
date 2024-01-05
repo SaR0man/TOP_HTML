@@ -1,5 +1,4 @@
-div {
-    background-color: lightgreen;
+/* div {
     width: 100px;
     height: 100px;
     border: 7px solid green;
@@ -12,9 +11,8 @@ div {
 
 body {
     display: flex;
-    justify-content: space-around;
     height: 500px;
-    /* align-items: center; */
+    flex-direction: row;
 }
 
 .one {
@@ -27,5 +25,103 @@ body {
 
 .three {
     background-color: gray;
-    order: -1;
+} */
+
+body {
+    background-color: aliceblue;
+    height: 100vh;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+.container {
+    background-color: rgb(121, 119, 255);
+    width: 500px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header {
+    background-color: bisque;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-left: 10px;
+}
+
+.site_name {
+    margin-left: 40px;
+    font-size: 35px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.menu {
+    background-color: darkgoldenrod;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.submenu {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0% 25%;
+    width: 100%;
+    user-select: none;
+}
+
+a:hover {
+    background-color: chocolate;
+    color: azure;
+    cursor: pointer;
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: azure;
+}
+
+.content {
+    background-color: coral;
+    height: 100%;
+    max-height: fit-content;
+    display: flex;
+}
+
+.left-content {
+    background-color: burlywood;
+    width: 25%;
+    height: 100%;
+}
+
+.right-content {
+    background-color: rgb(255, 247, 238);
+    width: 75%;
+    height: 100%;
+}
+
+.article {
+    margin: 20px 10px;    
+    /* overflow-y: scroll; */
+    text-align: justify;
+    max-height: 95%;
+}
+
+.footer {
+    background-color: rgb(99, 74, 28);
+    min-height: 100px;
+    margin-top: auto;
+}
+
