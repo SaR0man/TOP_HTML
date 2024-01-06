@@ -16,13 +16,28 @@ body {
 }
 
 .one {
-    width: 200px;
-    background-color: red;
+    width: 450px;
+    height: 100px;
+    background-image: url(./texture.jpg);
+    background-size: auto;
+    /* background-repeat: no-repeat; */
     position: sticky;
     top: 5px;
-    left: 50px;
+    margin: 5px auto;
     z-index: 10;
+    opacity: 0.5;
+    transition: 1s;
 }
+
+.one:hover {
+    opacity: 1;
+    transition: 1s;
+}
+
+/* *:hover {
+    border: 2px solid pink;
+    transition: 1s;
+} */
 
 .two {
     background-color: yellow;
