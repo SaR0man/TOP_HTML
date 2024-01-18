@@ -1,0 +1,29 @@
+@mixin text_small_gray {
+    color: gray;
+    font-size: 15px;
+    margin-left: 45px;
+}
+
+@mixin text_small_white {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    margin-left: 45px;
+}
+
+@mixin text_big_white {
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+    font-weight: bolder;
+    margin-left: 45px;
+    line-height: 65px;
+}
+
+@mixin text_small_grey_attr {
+    color: gray;
+    font-size: 15px;
+}
+
+@mixin text_small_white_attr {
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}

@@ -1,0 +1,93 @@
+.img_avatar {
+  width: 100px;
+  height: 100px;
+  margin-left: 45px;
+}
+
+body {
+  background-color: #004040;
+  height: 100vh;
+  margin: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.contayner {
+  max-width: 900px;
+  height: 480px;
+  margin: auto;
+  display: grid;
+  grid-template: 1fr 2fr 1fr/1fr;
+  grid-template-areas: "breadcrumbs" "article_name" "attributes";
+}
+
+.cell {
+  width: 100%;
+  height: 100%;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  grid-area: breadcrumbs;
+}
+.breadcrumbs span {
+  color: gray;
+  font-size: 15px;
+  margin-left: 45px;
+}
+
+.article_name {
+  display: flex;
+  align-items: flex-start;
+  grid-area: article_name;
+}
+.article_name span {
+  color: rgb(255, 255, 255);
+  font-size: 45px;
+  font-weight: bolder;
+  margin-left: 45px;
+  line-height: 65px;
+}
+
+.attributes {
+  grid-area: attributes;
+}
+
+.contayner_attributes {
+  height: 100%;
+  display: grid;
+  grid-template: 1fr/1fr repeat(4, 1fr);
+  grid-template-areas: "avatar right_attributes right_attributes right_attributes right_attributes";
+}
+
+.avatar {
+  grid-area: avatar;
+  display: flex;
+  align-items: center;
+}
+
+.right_attributes {
+  grid-area: right_attributes;
+}
+
+.container_right_attributes {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.attributes_top {
+  display: flex;
+  align-items: end;
+}
+.attributes_top span {
+  color: gray;
+  font-size: 15px;
+}
+
+.attributes_bottom span {
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+}/*# sourceMappingURL=style.css.map */
