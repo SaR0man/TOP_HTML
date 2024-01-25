@@ -1,0 +1,26 @@
+body {
+  margin-top: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+input {
+  margin: 2px;
+  width: 250px;
+}
+
+input[type=checkbox] {
+  width: auto;
+  margin-right: 15px;
+}
+
+input[type=radio] {
+  width: auto;
+  margin-right: 15px;
+}
+
+input[type=submit] {
+  width: -moz-fit-content;
+  width: fit-content;
+}/*# sourceMappingURL=style.css.map */
