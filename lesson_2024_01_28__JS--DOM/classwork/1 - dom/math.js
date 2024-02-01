@@ -20,10 +20,47 @@
 //     console.log(num++ + ') text');
 // }, 2 * 1000);
 
-let num = 1;
+// let num = 1;
 
-function interval() {
-    console.log(num++ + ') text');
-}
+// function interval() {
+    //     console.log(num++ + ') text');
+    // }
+    
+    // setInterval(interval, 2 * 1000);
+    
+    // setTimeout(() => {
+        //     console.log(num++ + ') text');
+        // }, 2 * 1000);
+        
+// let num = 0;
+// let arr = document.querySelectorAll('.box');
 
-setInterval(interval, 2 * 1000);
+// setTimeout(() => {
+//     arr[num++].style.backgroundColor = 'red';
+// }, 2 * 1000);
+
+// setTimeout(() => {
+//     arr[num - 1].style.backgroundColor = 'lightgray';
+//     arr[num++].style.backgroundColor = 'yellow';
+// }, 4 * 1000);
+
+// setTimeout(() => {
+//     arr[num - 1].style.backgroundColor = 'lightgray';
+//     arr[num++].style.backgroundColor = 'green';
+// }, 6 * 1000);
+
+// setTimeout(() => {
+//     arr[num - 1].style.backgroundColor = 'lightgray';
+// }, 8 * 1000);
+
+// let num = 0;
+// let arr = document.querySelectorAll('.box');
+
+// let id_1 = setInterval(() => {
+//     if (num >= arr.length) {
+//         console.log('stopped');
+//         clearInterval(id_1);
+//     } 
+//     arr[num++].style.background = 'pink';
+//     }, 3 * 1000);
+
