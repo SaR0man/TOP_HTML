@@ -1,0 +1,56 @@
+
+.container_external {
+    width: 150px;
+    height: 700px;
+    
+}
+
+.board {
+    width: 100%;
+    height: 400px;
+    background-color: #666666;
+    outline:7px solid black;
+    outline-offset:-7px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+.light_red {
+    width: 100px;
+    height: 100px;
+    background-color: #663333;
+    outline:7px solid #333333;
+    outline-offset:-7px;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+.light_yellow {
+    width: 100px;
+    height: 100px;
+    background-color: #666633;
+    outline:7px solid #333333;
+    outline-offset:-7px;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+.light_green {
+    width: 100px;
+    height: 100px;
+    background-color: #336633;
+    outline:7px solid #333333;
+    outline-offset:-7px;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+.pillar {
+    width: 50px;
+    height: 300px;
+    background-color: #cccccc;
+    margin: auto;
+}
