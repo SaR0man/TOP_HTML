@@ -1,0 +1,31 @@
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: lightgray;
+  border: 5px solid black;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+.box2 {
+  width: 100px;
+  height: 100px;
+  background-color: yellow;
+  border: 5px solid black;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

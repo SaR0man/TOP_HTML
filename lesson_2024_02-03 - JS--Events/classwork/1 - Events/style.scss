@@ -1,0 +1,27 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    border: 5px solid black;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    user-select: none; // запрет выделения пользователем текста внутри бокса
+    cursor: pointer;   // при наведении на бокс курсор становится типа "указательный палец"
+}
+
+.box2 {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border: 5px solid black;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    user-select: none;
+    cursor: pointer;
+}
