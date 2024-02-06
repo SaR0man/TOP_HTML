@@ -1,4 +1,5 @@
-.box {
+.box,
+.box_2 {
   width: 100px;
   height: 100px;
   background-color: lightgray;

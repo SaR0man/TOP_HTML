@@ -49,8 +49,45 @@
 //     event.stopPropagation();
 // })
 
-let box = document.querySelector('.box');
+// let boxes = document.querySelectorAll(".box");
 
+// for (const box of boxes) {
+//     box.addEventListener("click", () => {
+//         let num = event.target.innerText;
+//         num++;
+//         event.target.innerText = num;
+//     });
+// }
+
+
+// let container = document.querySelector('.container');
+// let box = document.createElement('div');
+// box.style.width = '100px';
+// box.style.height = '100px';
+// box.style.backgroundColor = 'red';
+// box.style.margin = '10px';
+
+// container.append(box);
+
+// document.querySelector('button').addEventListener('click', ()=>{
+//     let box = document.createElement('div');
+//     box.className = 'box';
+//     box.innerText = '1';
+    
+//     container.append(box);
+// })
+// let container = document.querySelector('.container');
+
+// container.addEventListener("click", () => {
+//     console.log(event.target);
+//     if(event.target.className == 'box'){
+//         let num = event.target.innerText;
+//         num++;
+//         event.target.innerText = num;
+//     }
+// });
+
+let box = document.querySelector('.box');
 box.addEventListener('click', ()=>{
-    event.target.innerText = 'on!'
+    event.target.remove();
 })
