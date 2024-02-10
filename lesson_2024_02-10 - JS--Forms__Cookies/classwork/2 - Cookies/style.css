@@ -1,0 +1,15 @@
+button {
+  width: 65px;
+  height: 25px;
+  border: 2px solid yellow;
+  border-radius: 25px;
+  margin: 3px;
+}
+
+#lightBtn {
+  background-color: lightgrey;
+}
+
+#darkBtn {
+  background-color: grey;
+}/*# sourceMappingURL=style.css.map */
