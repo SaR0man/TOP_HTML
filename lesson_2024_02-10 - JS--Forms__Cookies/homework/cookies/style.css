@@ -1,0 +1,104 @@
+body {
+  display: flex;
+  background-color: rgb(241, 241, 241);
+}
+
+.contentContainer {
+  max-width: 800px;
+  margin: auto;
+  padding: 10px;
+}
+
+.menuContainer {
+  width: 200px;
+  padding-top: 2px;
+  margin-right: 2px;
+}
+
+#setBtn {
+  width: 200px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.setMenu {
+  margin-top: 2px;
+  width: 100%;
+  border: 2px solid;
+  border-radius: 15px;
+  background-color: rgb(240, 240, 240);
+}
+
+.right {
+  display: flex;
+  justify-content: end;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+#close {
+  cursor: pointer;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+.menuBtn {
+  width: 50px;
+  height: 50px;
+  margin: 0px 2px;
+  margin-bottom: 2px;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bGrndClr_1 {
+  background-color: antiquewhite;
+}
+
+#bGrndClr_2 {
+  background-color: chocolate;
+}
+
+#txtClr_1 {
+  background-color: lightgray;
+  color: maroon;
+}
+
+#txtClr_2 {
+  background-color: lightgray;
+  color: white;
+}
+
+.title {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#txtSz_1 {
+  background-color: lightgray;
+  font-size: 15px;
+}
+
+#txtSz_2 {
+  background-color: lightgray;
+  font-size: 25px;
+}
+
+#txtSz_3 {
+  background-color: lightgray;
+  font-size: 35px;
+}/*# sourceMappingURL=style.css.map */

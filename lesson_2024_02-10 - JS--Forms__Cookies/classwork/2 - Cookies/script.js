@@ -16,14 +16,16 @@ document.querySelector('#darkBtn').addEventListener('click', ()=>{
 
 document.addEventListener('DOMContentLoaded', ()=>{
   let theme = document.cookie;
-  let color = theme.split(',')[1].split('=')[1];
-  let backColor = theme.split(',')[0].split('=')[1];
-
-  h2.style.color = color;
-  
-  if (backColor == 'Light') {
-    body.style.backgroundColor = 'lightGray';
-  } else if (backColor == 'Dark') {
-    body.style.backgroundColor = 'Gray';
+  if (theme != '') {
+    let color = theme.split(',')[1].split('=')[1];
+    let backColor = theme.split(',')[0].split('=')[1];
+    
+    h2.style.color = color;
+    
+    if (backColor == 'Light') {
+      body.style.backgroundColor = 'lightGray';
+    } else if (backColor == 'Dark') {
+      body.style.backgroundColor = 'Gray';
+    }
   }
 })
