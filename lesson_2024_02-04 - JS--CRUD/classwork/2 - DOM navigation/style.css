@@ -1,10 +1,5 @@
-li:hover {
-  background-color: lightgray;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-
-span:hover {
-  cursor: pointer;
+img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 300px;
 }/*# sourceMappingURL=style.css.map */

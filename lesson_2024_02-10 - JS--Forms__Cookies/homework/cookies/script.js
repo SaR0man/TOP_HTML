@@ -23,6 +23,8 @@ function findCookie(param) {
   }
 }
 
+//// Запись в cookie
+
 document.querySelector("#setBtn").addEventListener("click", () => {
   menu.hidden = false;
 });
@@ -33,44 +35,46 @@ document.querySelector("#close").addEventListener("click", () => {
 
 document.querySelector("#bGrndClr_1").addEventListener("click", () => {
   body.style.backgroundColor = "antiquewhite";
-  document.cookie = "bGrndClr=Light";
+  document.cookie = "bGrndClr=Light;max-age=86400";
 });
 
 document.querySelector("#bGrndClr_2").addEventListener("click", () => {
   body.style.backgroundColor = "chocolate";
-  document.cookie = "bGrndClr=Dark";
+  document.cookie = "bGrndClr=Dark;max-age=86400";
 });
 
 document.querySelector("#txtClr_1").addEventListener("click", () => {
   text.style.color = "maroon";
-  document.cookie = "txtClr=maroon";
+  document.cookie = "txtClr=maroon;max-age=86400";
 });
 
 document.querySelector("#txtClr_2").addEventListener("click", () => {
   text.style.color = "white";
-  document.cookie = "txtClr=white";
+  document.cookie = "txtClr=white;max-age=86400";
 });
 
 document.querySelector("#txtSz_1").addEventListener("click", () => {
   text.style.fontSize = "14px";
   title.style.fontSize = "20px";
   subtitleFontSize("17px");
-  document.cookie = "txtSz=small";
+  document.cookie = "txtSz=small;max-age=86400";
 });
 
 document.querySelector("#txtSz_2").addEventListener("click", () => {
   text.style.fontSize = "16px";
   title.style.fontSize = "25px";
   subtitleFontSize("20px");
-  document.cookie = "txtSz=normal";
+  document.cookie = "txtSz=normal;max-age=86400";
 });
 
 document.querySelector("#txtSz_3").addEventListener("click", () => {
   text.style.fontSize = "18px";
   title.style.fontSize = "30px";
   subtitleFontSize("25px");
-  document.cookie = "txtSz=large";
+  document.cookie = "txtSz=large;max-age=86400";
 });
+
+//// Считывание с cookie
 
 document.addEventListener("DOMContentLoaded", () => { 
   console.log(findCookie("bGrndClr"));
