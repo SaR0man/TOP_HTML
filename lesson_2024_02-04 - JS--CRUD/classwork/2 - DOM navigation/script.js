@@ -19,20 +19,45 @@
 
 let form = document.forms.myForm;
 
-form.addEventListener('submit', ()=>{
-    // alert('Hello world!');
+form.addEventListener("submit", () => {
+  event.preventDefault;
+});
 
-    event.preventDefault;
-})
-
-// form.addEventListener('change', ()=>{
+// form.text.addEventListener('change', ()=>{
 //     console.log('change');
 // })
 
-form.addEventListener('input', ()=>{
-    console.log('input: ' + event.target.value);
-})
+// form.text.addEventListener('input', ()=>{
+//     console.log('input: ' + event.target.value);
+// })
 
+// form.addEventListener('keydown', ()=>{
+//     console.log('keydown: ' + event.key);
+// })
 
+// form.addEventListener('keyup', ()=>{
+//     console.log('keyup: ' + event.key);
+// })
 
+// form.addEventListener('keyup', ()=>{
+//     console.log('keyup: ' + event.key);
+// })
 
+// form.text.addEventListener("keydown", () => {
+//   console.log("keydown");
+//   if (event.key == "_" || event.key == "@") {
+//     event.preventDefault();
+//   }
+// });
+
+form.text.addEventListener("keydown", () => {
+  console.log("keydown");
+  if (event.key == "_" || event.key == "@") {
+    event.preventDefault();
+  }
+  for (let index = 0; index < 10; index++) {
+    if (event.key == index) {
+      event.preventDefault();
+    }
+  }
+});
