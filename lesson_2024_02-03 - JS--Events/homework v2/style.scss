@@ -1,0 +1,23 @@
+body {
+    height: 100vh;
+    background-color: rgb(255, 252, 237);
+    margin: 0;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    outline:5px solid black;
+    outline-offset:-5px;
+    border-radius: 50px;
+    margin-top: 10px;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    position: absolute;
+    transition: 1s;
+    transition-timing-function: linear;
+}
