@@ -1,0 +1,15 @@
+.container {
+  width: 650px;
+  background-color: antiquewhite;
+  padding: 10px;
+}
+
+textarea {
+  width: 100%;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
+
+#bttn {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */
