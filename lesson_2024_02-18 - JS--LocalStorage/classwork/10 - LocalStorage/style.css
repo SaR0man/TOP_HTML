@@ -1,0 +1,13 @@
+li:hover {
+  background-color: gray;
+}
+
+span:hover {
+  background-color: gray;
+  cursor: pointer;
+}
+
+ol {
+  background-color: antiquewhite;
+  height: 20px;
+}/*# sourceMappingURL=style.css.map */
