@@ -10,8 +10,8 @@
 
 // test();
 
-async function searchByTitle(title) {
-    let result = await fetch(`https://omdbapi.com/?s=${title}&apikey=5c3f2d56`);
+async function searchByTitle(title, page = 1) {
+    let result = await fetch(`https://omdbapi.com/?s=${title}&apikey=5c3f2d56&page=${page}`);
     let data = await result.json();
 
     return data;
