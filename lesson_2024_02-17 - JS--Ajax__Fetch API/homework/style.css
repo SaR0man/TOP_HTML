@@ -1,1 +1,15 @@
-/*# sourceMappingURL=style.css.map */
+.container {
+  width: 400px;
+}
+
+.resultData {
+  margin-left: 20px;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.cityName {
+  font-size: larger;
+  font-weight: 500;
+}/*# sourceMappingURL=style.css.map */
