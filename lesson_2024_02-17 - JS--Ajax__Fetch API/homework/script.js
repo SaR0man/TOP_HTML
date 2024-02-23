@@ -5,6 +5,7 @@ async function searchByCity(city) {
     let result = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&unit=metric&appid=6bbc763f2e3a1264a397b8f146680f4a`);
     
     let data = await result.json();
+    console.log(data);
     return data;
 }
 
@@ -23,9 +24,11 @@ myForm.addEventListener('submit', async ()=>{
     let cityWindSpeed = data.wind.speed;
     let cityWindDirection = data.wind.deg;
     let cityPressure = data.main.pressure;
+    let weatherIcon = data.weather[0]['icon'];
+    console.log(weatherIcon);
 
     myForm.reset();  // сбрасываем содержимое поля input
-    renderParameters(cityName, cityTemp, cityTempFL, cityClouds, cityHumidity, cityWindSpeed, cityWindDirection, cityPressure)
+    renderParameters(cityName, cityTemp, cityTempFL, cityClouds, cityHumidity, cityWindSpeed, cityWindDirection, cityPressure, weatherIcon);
 })
 
 let resultData = document.querySelector('.resultData');
@@ -33,7 +36,7 @@ let resultData = document.querySelector('.resultData');
 // let cityName = data.name;
 
 
-function renderParameters(cityName, cityTemp, cityTempFL, cityClouds, cityHumidity, cityWindSpeed, cityWindDirection, cityPressure) {
+function renderParameters(cityName, cityTemp, cityTempFL, cityClouds, cityHumidity, cityWindSpeed, cityWindDirection, cityPressure, weatherIcon) {
     resultData.innerHTML = '';
     resultData.hidden = false;
     // resultData.style.backgroundImage = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png">`;
@@ -45,7 +48,9 @@ function renderParameters(cityName, cityTemp, cityTempFL, cityClouds, cityHumidi
         <div class="cityHumidity">Humidity: ${cityHumidity}%</div>
         <div class="cityWind">Wind: '${windDirection(cityWindDirection)}' ${cityWindSpeed} m/s</div>
         <div class="cityPressure">Pressure: ${cityPressure} hPa</div>
+        <div class="weatherIcon">Icon</div>
     `;
+    document.querySelector('.weatherIcon').style.backgroundImage = `<img src="https://openweathermap.org/img/wn/${weatherIcon}@2x.png">`;
 };
 
 function windDirection(cityWindDirection) {
