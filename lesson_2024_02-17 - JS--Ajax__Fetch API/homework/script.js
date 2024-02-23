@@ -1,6 +1,4 @@
 
-// let data;
-
 async function searchByCity(city) {
     let result = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&unit=metric&appid=6bbc763f2e3a1264a397b8f146680f4a`);
     
@@ -33,24 +31,18 @@ myForm.addEventListener('submit', async ()=>{
 
 let resultData = document.querySelector('.resultData');
 
-// let cityName = data.name;
-
-
 function renderParameters(cityName, cityTemp, cityTempFL, cityClouds, cityHumidity, cityWindSpeed, cityWindDirection, cityPressure, weatherIcon) {
     resultData.innerHTML = '';
     resultData.hidden = false;
-    // resultData.style.backgroundImage = `<img src="https://openweathermap.org/img/wn/${data.weather[0]['icon']}@2x.png">`;
     resultData.innerHTML += `
         <div class="cityName">${cityName}</div>
-        <div class="cityTemp">Temperature: ${cityTemp}&deg;C</div>
+        <div class="cityTemp"><img src="https://openweathermap.org/img/wn/${weatherIcon}.png"> ${cityTemp}&deg;C</div>
         <div class="cityTempFL">Feels like: ${cityTempFL}&deg;C</div>
         <div class="cityClouds">Clouds: ${cityClouds}%</div>
         <div class="cityHumidity">Humidity: ${cityHumidity}%</div>
         <div class="cityWind">Wind: '${windDirection(cityWindDirection)}' ${cityWindSpeed} m/s</div>
         <div class="cityPressure">Pressure: ${cityPressure} hPa</div>
-        <div class="weatherIcon">Icon</div>
     `;
-    document.querySelector('.weatherIcon').style.backgroundImage = `<img src="https://openweathermap.org/img/wn/${weatherIcon}@2x.png">`;
 };
 
 function windDirection(cityWindDirection) {
