@@ -1,0 +1,10 @@
+li:hover {
+  background-color: lightgray;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+span:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
