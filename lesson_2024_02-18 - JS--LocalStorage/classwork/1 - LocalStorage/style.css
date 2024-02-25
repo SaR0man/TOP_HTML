@@ -7,4 +7,9 @@ li:hover {
 
 span:hover {
   cursor: pointer;
+}
+
+.container {
+  width: 350px;
+  margin: auto;
 }/*# sourceMappingURL=style.css.map */

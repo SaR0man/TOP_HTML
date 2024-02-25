@@ -52,7 +52,7 @@ function drawItem(obj) {
   list.innerHTML += `
   <li class="list-group-item d-flex justify-content-between align-items-start">
     <div class="ms-2 me-auto">
-      <div class="fw-bold"><span>❌</span>${obj.title}</div>
+      <div class="fw-bold"><span data-id = "${obj.id}">❌</span>${obj.title}</div>
       Number: ${obj.phone};
     </div>
     <span class="badge bg-primary rounded-pill">${obj.push}</span>
@@ -60,14 +60,35 @@ function drawItem(obj) {
 `;
 }
 
+function deleteObgById (id) {
+    arr = arr.filter(item => item.id != id);
+    localStorage.setItem("list", JSON.stringify(arr));
+}
+
 document.querySelector("#myBtnClear").addEventListener("click", () => {
     list.innerHTML = "";
+    localStorage.clear();
+    arr = [];
 });
 
 list.addEventListener("click", () => {
     if (event.target.tagName == "SPAN") {
         event.target.parentElement.parentElement.parentElement.remove();
+
+        let id = event.target.dataset.id;
+        deleteObgById(id);
     }
 });
+
+document.addEventListener('DOMContentLoaded', ()=>{
+    let str = localStorage.getItem('list');
+    if (str) {
+        arr = JSON.parse(str);
+
+        for (const item of arr) {
+            drawItem(item);
+        }
+    }
+})
 
 // localStorage.clear();
