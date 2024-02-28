@@ -5,10 +5,23 @@
 
 .container {
     width: 400px;
-    background-color: antiquewhite;
+    // background-color: antiquewhite;
 
 }
 
 button {
     width: 100%;
+}
+
+.myRow {
+    width: 100%;
+}
+
+li:hover {
+    background-color: lightgray;
+    user-select: none;
+}
+
+span:hover {
+    cursor: pointer;
 }

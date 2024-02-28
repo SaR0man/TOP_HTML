@@ -4,9 +4,23 @@
 
 .container {
   width: 400px;
-  background-color: antiquewhite;
 }
 
 button {
   width: 100%;
+}
+
+.myRow {
+  width: 100%;
+}
+
+li:hover {
+  background-color: lightgray;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+span:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
