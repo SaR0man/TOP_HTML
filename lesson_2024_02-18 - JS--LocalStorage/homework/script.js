@@ -3,30 +3,8 @@ let shopList = [];
 let list = document.querySelector(".myList");
 let btn = document.querySelector("#btnAdd");
 
-// function checkNumber(number) {
-//     if (number < 1 )
-// }
-
-// Отрисовываем строку с товаром
+//// Отрисовываем строку с товаром
 function drawItem(obj) {
-  // list.innerHTML += `
-  // <li class="list-group-item d-flex justify-content-between align-items-start p-1">
-  //     <div class="myRow ms-2 me-auto">
-  //         <div class="fw-bold d-flex justify-content-between">${obj.purchaseName}
-  //             <span data-id = "${obj.id}">&#9989;</span>
-  //         </div>`
-  //           if (obj.purchaseNumber > 0) {
-  //             list.innerHTML += `
-  //             <div class="fs-6">${obj.purchaseNumber} &nbsp;${obj.purchaseUnit}</div>
-  //             `
-  //           }
-  //           if (obj.purchaseNote != "Комментарий" && obj.purchaseNote.trim != "") {
-  //             list.innerHTML += `
-  //             <div class="fs-6">${obj.purchaseNote}</div>
-  //             `
-  //           }
-  //           list.innerHTML += "</div></li>";
-
   list.innerHTML += `<li class="list-group-item d-flex justify-content-between align-items-start p-1">
   <div class="myRow ms-2 me-auto">
     <div class="fw-bold d-flex justify-content-between">${obj.purchaseName} <span data-id="${obj.id}">✅</span></div>
@@ -36,6 +14,7 @@ function drawItem(obj) {
 </li>`;
 }
 
+//// отправка введенных данных в новый объект; его запись в массив
 document.forms.groupForm.addEventListener("submit", () => {
     event.preventDefault();
     
@@ -46,6 +25,7 @@ document.forms.groupForm.addEventListener("submit", () => {
         let unit = document.querySelector(".purchaseUnit").value;
         let note = document.querySelector(".purchaseNote").value;
 
+        // создаем объект:
         let obj = {
           id: Date.now(),
           purchaseName: text,
@@ -54,17 +34,18 @@ document.forms.groupForm.addEventListener("submit", () => {
           purchaseNote: note
         }
         
-        shopList.push(obj);
-        localStorage.setItem("list", JSON.stringify(shopList));
+        shopList.push(obj);  // добавляем объект в массив
+        
+        // перезаписываем массив в localStorage:
+        localStorage.setItem("list", JSON.stringify(shopList));  
     
-        drawItem(obj);
+        drawItem(obj);  // отрисовываем объект
     
-        document.forms.groupForm.reset();
-    
+        document.forms.groupForm.reset();  // сбрасываем содержимое полей ввода
     }
 });
 
-// удаляем по клику на галочке
+//// удаляем по клику на галочке
 list.addEventListener("click", () => {
   if (event.target.tagName == "SPAN") {
       event.target.parentElement.parentElement.parentElement.remove();
@@ -74,15 +55,38 @@ list.addEventListener("click", () => {
   }
 });
 
-// отображаем список покупок
+//// удаление объекта из массива по id
+function deleteObgById (id) {
+  shopList = shopList.filter(item => item.id != id);
+  localStorage.setItem("list", JSON.stringify(shopList));
+}
+
+//// полная очистка
+document.querySelector("#btnClr").addEventListener("click", () => {
+  list.innerHTML = "";   // списка на веб-странице
+  localStorage.clear();  // очистка localStorage
+  shopList = [];         // очистка массива
+});
+
+
+//// считываем список с массива shopList в locakStorage и отображаем список покупок 
 document.addEventListener('DOMContentLoaded', ()=>{
   let str = localStorage.getItem('list');
   if (str) {
-      arr = JSON.parse(str);
+    shopList = JSON.parse(str);
 
-      for (const item of arr) {
+      for (const item of shopList) {
           drawItem(item);
       }
   }
 })
 
+//// сбрасываем текст по умолчанию в поле с единицами измерения
+document.querySelector('.purchaseUnit').addEventListener('click', ()=>{
+  document.querySelector('.purchaseUnit').value = '';
+})
+
+//// сбрасываем текст по умолчанию в поле с комментарием
+document.querySelector('#floatingTextarea').addEventListener('click', ()=>{
+  document.querySelector('#floatingTextarea').value = '';
+})
