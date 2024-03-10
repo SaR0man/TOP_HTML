@@ -1,17 +1,16 @@
-package com.example.demo.controllers;
+package com.example.demo.conrollers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
 @RequestMapping("test")
 
 public class TestController {
-
     @GetMapping("one")
-
-    public String one () {
-        return ("Hello world!");
+    public String One() {
+        return ("Hello Word!");
     }
 }
