@@ -51,10 +51,23 @@ public class TestController {
         return result;
     }
 
-//    @GetMapping("/evenOdd")
-//    public boolean evenOdd (int value) {
-//        value % 2 == 0?
-//    }
+    // 1) Клиент отправляет число вернуть true, если оно четное в противном случае - false
+    @GetMapping("/evenOdd")
+    public boolean evenOdd (double value) {
+        return value % 2 == 0;
+    }
+
+    // 2) Клиент отправляет число вернуть true если оно положительное в противном случае false
+    @GetMapping("/posNeg")
+    public boolean posNeg (double value) {
+        return value > 0;
+    }
+
+    // 2) Клиент отправляет число вернуть true если оно делиться на 10 без остатка в противном случае false
+    @GetMapping("/div10")
+    public boolean div10 (double value) {
+        return value % 10 == 0;
+    }
 
 
 }
