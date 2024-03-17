@@ -100,9 +100,13 @@ public class TestController {
             vowels.add(vow.charAt(i));
         }
 
+
+        /*
+        проверяем каждую букву переданного слова на совпадение с коллекцией гласных букв:
+         */
         for (int i = 0; i < workWord.length(); i++) {
             if (vowels.contains(workWord.charAt(i)))
-                count++;
+                count++;  // в случае совпадения увеличиваем счетчик
         }
 
         result += " " + count + " гласных букв и " + (word.length() - count) + " согласных букв.";
@@ -110,5 +114,19 @@ public class TestController {
         return result;
     }
 
+    // 7) Клиент отправляет Слово , вернуть количество символов в этом слове
+    @GetMapping("/letters")
+    public int letters(String word) {
+        return word.length();
+    }
+
+    // 8) Клиент отправляет Предложение. Вернуть количество слов в предложении
+    @GetMapping("/words")
+    public int words(String sentence) {
+
+        String[] words = sentence.split("\\s+");
+
+        return words.length;
+    }
 
 }
