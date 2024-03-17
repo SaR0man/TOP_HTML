@@ -87,28 +87,4 @@ public class TestController {
         return ((number1 + number2 + number3) / 3);
     }
 
-    // 6) Клиент отправляет Слово. Вернуть количество гласных и согласных (например, в слове "мама" 2 гласных и 2 согласных)
-    @GetMapping("/vowels")
-    public String result (String word) {
-        String workWord = word.toLowerCase();
-        String result = "В слове \"" + word + "\""; // заготовка для сообщения, передаваемого во front
-        int count = 0;
-
-        String vow = "aeiouаеёиоуыэюя"; // гласные eng и рус
-        ArrayList<Character> vowels = new ArrayList<>(); // для списка гласных
-        for (int i = 0; i < vow.length(); i++) { //// заполняем vowels гласными
-            vowels.add(vow.charAt(i));
-        }
-
-        for (int i = 0; i < workWord.length(); i++) {
-            if (vowels.contains(workWord.charAt(i)))
-                count++;
-        }
-
-        result += " " + count + " гласных букв и " + (word.length() - count) + " согласных букв.";
-
-        return result;
-    }
-
-
 }
