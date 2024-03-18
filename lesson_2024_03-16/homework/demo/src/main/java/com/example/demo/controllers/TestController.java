@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,45 +12,6 @@ import java.util.List;
 @RequestMapping("test")
 
 public class TestController {
-
-    List<String> work;
-
-    public TestController() {
-        work = new ArrayList<>();
-        work.add("Даша");
-        work.add("Маша");
-        work.add("Паша");
-        work.add("Саша");
-        work.add("Глаша");
-    }
-
-    @GetMapping("/arr")
-    public List<String> arr() {
-        return work;
-    }
-
-    @GetMapping("/str")
-    public String str () {
-        return ("Backend message");
-    }
-
-    @GetMapping("/sum")
-    public int sum (int a, int b) { return a + b; }
-
-    @GetMapping("/subtract")
-    public int subtract (int a, int b) { return a - b; }
-
-    @GetMapping("/calc")
-    public int calc (int a, int b, String c) {
-        int result = 0;
-        switch (c) {
-            case "+": result = a + b;
-            break;
-            case "-": result = a - b;
-            break;
-        }
-        return result;
-    }
 
     // 1) Клиент отправляет число вернуть true, если оно четное в противном случае - false
     @GetMapping("/evenOdd")
@@ -124,9 +86,37 @@ public class TestController {
     @GetMapping("/words")
     public int words(String sentence) {
 
-        String[] words = sentence.split("\\s+");
+        String[] words = sentence.split("\\s+");  // знак-разделитель - один пробел или множество
 
         return words.length;
+    }
+
+    // 9) Клиент отправляет Слово. Вернуть это слово наоборот
+    @GetMapping("/revers")
+    public String revers(String word) {
+        return new StringBuilder(word).reverse().toString();  // класс StringBuilder более эффективный для работы со строками, чем String
+    }
+
+    // 10) Клиент отправляет Слово. Вернуть true если оно является палиндромом, в противном случае - false
+    @GetMapping("/isPalindrome")
+    public boolean isPalindrome(String str) {
+        str.toLowerCase();
+        String newStr = new StringBuilder(str).reverse().toString();
+        return newStr.equals(str);
+    }
+
+    // 1)* Проверка на простое число: Клиент отправляет число, вернуть true, если оно является простым числом (делится только на себя и на 1), в противном случае вернуть false.
+    @GetMapping("/isPrimeNumber")
+    public boolean isPrimeNumber(int num) {
+            if (num <= 1) return false;  // ряд простых чисел начинается с 2
+            if (num == 2) return true;
+
+            for (int i = 2; i <= Math.sqrt(num); i++) {  // достаточно проверить деление на числа от 2 до корня из переданного числа
+                if (num % i == 0) {
+                    return false;
+                }
+            }
+            return true;
     }
 
 }
