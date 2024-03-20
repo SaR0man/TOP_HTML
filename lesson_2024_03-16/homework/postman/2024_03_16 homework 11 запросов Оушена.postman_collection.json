@@ -1,0 +1,332 @@
+{
+	"info": {
+		"_postman_id": "a7ad6ef9-cbfe-457c-a153-1adbf52f076a",
+		"name": "2024_03_16 homework 11 запросов Оушена",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33333295"
+	},
+	"item": [
+		{
+			"name": "evenOdd",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/test/evenOdd?value=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"evenOdd"
+					],
+					"query": [
+						{
+							"key": "value",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/test/posNeg?value=-2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"posNeg"
+					],
+					"query": [
+						{
+							"key": "value",
+							"value": "-2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "div10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/test/div10?value=-10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"test",
+						"div10"
+					],
+					"query": [
+						{
+							"key": "value",
+							"value": "-10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posHundred",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{address}}/posHundred?value=104.2",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"posHundred"
+					],
+					"query": [
+						{
+							"key": "value",
+							"value": "104.2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "between5And10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{address}}/between5And10?value=9",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"between5And10"
+					],
+					"query": [
+						{
+							"key": "value",
+							"value": "9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "arithmMean",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{address}}/arithmMean?number1=1&number2=2&number3=6",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"arithmMean"
+					],
+					"query": [
+						{
+							"key": "number1",
+							"value": "1"
+						},
+						{
+							"key": "number2",
+							"value": "2"
+						},
+						{
+							"key": "number3",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vowels",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{address}}/vowels?word=электростанция",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"vowels"
+					],
+					"query": [
+						{
+							"key": "word",
+							"value": "электростанция"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "letters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{address}}/letters?word=mother",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"letters"
+					],
+					"query": [
+						{
+							"key": "word",
+							"value": "mother"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "words",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{address}}/words?sentence=How many words are in this sentence?",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"words"
+					],
+					"query": [
+						{
+							"key": "sentence",
+							"value": "How many words are in this sentence?"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "revers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{address}}/revers?word=123456",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"revers"
+					],
+					"query": [
+						{
+							"key": "word",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "isPalindrome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{address}}/isPalindrome?str=казаки",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"isPalindrome"
+					],
+					"query": [
+						{
+							"key": "str",
+							"value": "казаки"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "isPrimeNumber",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{address}}/isPrimeNumber?num=17",
+					"host": [
+						"{{address}}"
+					],
+					"path": [
+						"isPrimeNumber"
+					],
+					"query": [
+						{
+							"key": "num",
+							"value": "17"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "address",
+			"value": "http://localhost:6060/test",
+			"type": "string"
+		}
+	]
+}

@@ -4,9 +4,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
-import java.util.List;
 
 @RestController
 @RequestMapping("test")
@@ -62,7 +60,6 @@ public class TestController {
             vowels.add(vow.charAt(i));
         }
 
-
         /*
         проверяем каждую букву переданного слова на совпадение с коллекцией гласных букв:
          */
@@ -104,6 +101,8 @@ public class TestController {
         String newStr = new StringBuilder(str).reverse().toString();
         return newStr.equals(str);
     }
+
+    ////// Задачи со звездочкой, на которые было время :-)
 
     // 1)* Проверка на простое число: Клиент отправляет число, вернуть true, если оно является простым числом (делится только на себя и на 1), в противном случае вернуть false.
     @GetMapping("/isPrimeNumber")

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="GradleSettings">
+    <option name="linkedExternalProjectsSettings">
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/lesson_2024_03-03/classwork/demo" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/lesson_2024_03-03/classwork/demo" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/lesson_2024_03-03/classwork_v2/demo" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/lesson_2024_03-03/classwork_v2/demo" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/lesson_2024_03-03/classwork_v3/Spring/demo" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/lesson_2024_03-03/classwork_v3/Spring/demo" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/lesson_2024_03-03/classwork_v5/demo" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/lesson_2024_03-03/classwork_v5/demo" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/lesson_2024_03-03/classwork_v6/demo" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/lesson_2024_03-03/classwork_v6/demo" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/lesson_2024_03-16/classwork_v0/demo" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/lesson_2024_03-16/classwork_v0/demo" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/lesson_2024_03-16/homework/demo" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/lesson_2024_03-16/homework/demo" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/lesson_2024_03_17 - CRUD/classwork/demo" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/lesson_2024_03_17 - CRUD/classwork/demo" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+    </option>
+  </component>
+</project>
