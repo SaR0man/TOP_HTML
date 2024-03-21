@@ -1,5 +1,6 @@
 package com.example.demo.controllers;
 
+import com.example.demo.models.Person;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,29 +13,30 @@ import java.util.List;
 
 public class TestController {
 
-    List<String> work;  // поле класса
+    //// поле класса
+    List<Person> work;
+//    static int id = 1;
 
+    //// конструктор, вызывающий метод initList()
     public TestController() {  // конструктор, вызывающий метод initList()
         initList();
     }
 
-    private void initList() {  // метод создает и заполняет коллекцию work
+    //// метод создает коллекцию work и добавляет объект Person
+    private void initList() {
         work = new ArrayList<>();
-        work.add("Даша");
-        work.add("Маша");
-        work.add("Паша");
-        work.add("Саша");
-        work.add("Глаша");
+        work.add(new Person("John", 1));
     }
 
+    ////// Запросы:
     @GetMapping("/all")
-    public List<String> getAll() {
+    public List<Person> getAll() {
         return work;
     }
 
     @GetMapping("/add")
-    public boolean addUser(String name) {
-        work.add(name);
+    public boolean addUser(String name, int id) {
+        work.add(new Person(name, id));
         return true;
     }
 
@@ -43,6 +45,4 @@ public class TestController {
         work.clear();
         return true;
     }
-
-
 }
