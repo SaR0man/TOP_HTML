@@ -3,7 +3,9 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(encrypt("I'll learn Java to change the World", "crypto"));
+        List<Integer> coded = (encrypt("I'll learn Java to change the World!", "crypto"));
+        System.out.println(coded);
+        System.out.println(decrypt(coded, "crypto"));
     }
 
     //// заполняем словарь наиболее встречающихся символов: " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
@@ -43,13 +45,13 @@ public class Main {
 //            System.out.println(alphabet.indexOf(original.charAt(i)));
             if (y == key.length()) y = 0;
             int keyValue = alphabet.indexOf(key.charAt(y));
-            int decryptSymbol = (alphabet.charAt(coded.get(i) - keyValue));
-            if (decryptSymbol < 0) decryptSymbol += alphabet.length();
-            coded.add(decryptSymbol);
+            int decryptIndex = coded.get(i) - keyValue;
+            if (decryptIndex < 0) decryptIndex += alphabet.length();
+            decoded += alphabet.charAt(decryptIndex);
         }
 //        System.out.println(coded);
 
-        return coded;
+        return decoded;
     }
 
 
