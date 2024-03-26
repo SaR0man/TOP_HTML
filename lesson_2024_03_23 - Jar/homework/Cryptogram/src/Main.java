@@ -3,9 +3,19 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List<Integer> coded = (encrypt("I'll learn Java to change the World!", "crypto"));
-        System.out.println(coded);
-        System.out.println(decrypt(coded, "crypto"));
+        //// Входные данные:
+        String originalText = "I'll learn Java to change the World!";
+        String key = "crypto";
+
+        //// Основной алгоритм:
+        System.out.println("=====================================================================================");
+        System.out.println("Шифр Виженера — метод полиалфавитного шифрования буквенного текста с использованием ключевого слова.");
+        System.out.println("На протяжении трех столетий он противостоял всем попыткам его взломать, благодаря чему его называли «неразгаданным шифром».");
+        System.out.println("=====================================================================================");
+        System.out.println("Оригинальная фраза: \"" + originalText + "\", кодировать ключом: " + key);
+        List<Integer> coded = (encrypt(originalText, key));
+        System.out.println("В закодированном виде: " + coded);
+        System.out.println("В раскодированном виде: " + decrypt(coded, key));
     }
 
     //// заполняем словарь наиболее встречающихся символов: " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"
