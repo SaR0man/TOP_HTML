@@ -17,7 +17,6 @@ public class Crypto {
         List<Integer> coded = new ArrayList<>();  // заготовка возвращаемой коллекции
 
         for (int i = 0, y = 0; i < original.length(); i++, y++) {
-//            System.out.println(alphabet.indexOf(original.charAt(i)));
             if (y == key.length()) y = 0;  // если доходим до конца key, сбрасываем индекс снова на 0
             int keyValue = alphabet.indexOf(key.charAt(y));  // получаем индекс текущего символа key в словаре alphabet
             // индекс текущего символа строки original в словаре alphabet + индекс текущего символа key в словаре alphabet
@@ -25,25 +24,22 @@ public class Crypto {
             if (encryptSymbol >= alphabet.length()) encryptSymbol -= alphabet.length();  // индекс зашифрованного символа должен оставаться в пределах индексов словаря (сдвиг)
             coded.add(encryptSymbol);
         }
-//        System.out.println(coded);
 
         return coded;
     }
 
+    //// раскодируем коллекцию coded ключом key
     public static String decrypt(List<Integer> coded, String key) {
         String alphabet = alphabet();
-//        List<Integer> coded = new ArrayList<>();
         String decoded = "";
 
         for (int i = 0, y = 0; i < coded.size(); i++, y++) {
-//            System.out.println(alphabet.indexOf(original.charAt(i)));
             if (y == key.length()) y = 0;
             int keyValue = alphabet.indexOf(key.charAt(y));
             int decryptIndex = coded.get(i) - keyValue;
             if (decryptIndex < 0) decryptIndex += alphabet.length();
             decoded += alphabet.charAt(decryptIndex);
         }
-//        System.out.println(coded);
 
         return decoded;
     }
