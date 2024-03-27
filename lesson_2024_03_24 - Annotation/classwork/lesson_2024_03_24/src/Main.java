@@ -2,35 +2,35 @@
 //    String author();
 //    String date();
 //    String lastModify() default "unknown";
-//    int currentRevision();
-//    String lastModifyBy();
+//    String lastModifyBy(); // default "unknown"
 //    String[] reviewers();
+//    int currentRevision(); // default 1
 //}
+//
+//@Description(
+//        author = "Ivanov",
+//        date = "01.06.2010",
+//        lastModify = "",
+//        lastModifyBy = "",
+//        reviewers = {"Petrov", "Vasechkin"},
+//        currentRevision = 2
+//)
 
-//@Description(author = "Ivanov", date = "01.06.2010", lastModify = "15.10.2012", lastModifyBy = "Petrov", reviewers = {"Sidorov", "Vasechkin"}, currentRevision = 2)
+import java.lang.annotation.*;
 
-import java.lang.annotation.ElementType;
-import java.lang.annotation.Target;
-
-@Target(ElementType.TYPE)
+@Target(ElementType.PARAMETER)
 @interface MyGetMapping {
-    String path();
+    String welcome();
 }
 
-//@MyGetMapping("/welcome")
+//@MyGetMapping(path = "/welcome")
 class Person {
-    @MyGetMapping("/welcome")
-            public String welcome() {
-        return "Hi!";
-    }
     String name;
     String surname;
     int age;
 
     public Person() {
     }
-
-
 
     public Person(String name, String surname, int age) {
         this.name = name;
@@ -61,6 +61,9 @@ class Person {
     public void setAge(int age) {
         this.age = age;
     }
+
+//    @MyGetMapping(path = "/welcome")
+    public String welcome(@MyGetMapping(path = "/welcome") String something) { return "Hi!"; }
 }
 
 public class Main {
