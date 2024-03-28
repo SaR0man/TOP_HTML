@@ -16,58 +16,94 @@
 //        currentRevision = 2
 //)
 
-import java.lang.annotation.*;
-
-@Target(ElementType.PARAMETER)
-@interface MyGetMapping {
-    String welcome();
-}
+//import java.lang.annotation.*;
+//
+//@Target(ElementType.PARAMETER)
+//@Retention(RetentionPolicy.SOURCE)
+//@interface MyGetMapping {
+//    String welcome();
+//}
 
 //@MyGetMapping(path = "/welcome")
-class Person {
-    String name;
-    String surname;
-    int age;
+//class Person {
+//    String name;
+//    String surname;
+//    int age;
+//
+//    public Person() {
+//    }
+//
+//    public Person(String name, String surname, int age) {
+//        this.name = name;
+//        this.surname = surname;
+//        this.age = age;
+//    }
+//
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+//
+//    public String getSurname() {
+//        return surname;
+//    }
+//
+//    public void setSurname(String surname) {
+//        this.surname = surname;
+//    }
+//
+//    public int getAge() {
+//        return age;
+//    }
+//
+//    public void setAge(int age) {
+//        this.age = age;
+//    }
+//
+//    @Deprecated()
+//    //    @MyGetMapping(path = "/welcome")
+//    public String welcome() { return "Hi!"; }
+//}
 
-    public Person() {
-    }
+import java.lang.annotation.*;
 
-    public Person(String name, String surname, int age) {
-        this.name = name;
-        this.surname = surname;
-        this.age = age;
-    }
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.TYPE)
+@Repeatable(Mammals.class)
+@interface Mammal {
+    String sound();
+    int color()default 0xFFFFFF;
+}
 
-    public String getName() {
-        return name;
-    }
+@Retention(RetentionPolicy.RUNTIME)
+@Target(ElementType.TYPE)
+@interface Mammals {
+    Mammal[] value();
+}
+@Deprecated
+@Mammal(sound = "meow", color = 0x128128)
+@Mammal(sound = "mieaou!", color = 0xFEDCBA)
+class Cat {
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-//    @MyGetMapping(path = "/welcome")
-    public String welcome(@MyGetMapping(path = "/welcome") String something) { return "Hi!"; }
 }
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Cat cat = new Cat();
+        Class catClass = cat.getClass();
+        Annotation[] annotations = catClass.getAnnotations();
+        for (Annotation annotation : annotations) {
+//            System.out.println(annotation.annotationType().getSimpleName());
+            if (annotation instanceof Mammals) {
+                Mammals mammals = (Mammals) annotation;
+                for (Mammal mammal : mammals.value()) {
+                        System.out.println("Котик издает звук: " + mammal.sound());
+                        System.out.println("Котик имеет цвет : " + mammal.color());
+                }
+            }
+        }
     }
 }
