@@ -67,4 +67,18 @@ public class TestController {
         work.clear();
         return true;
     }
+
+    @GetMapping("/createPerson")
+    public String createPerson() {
+        // Создаем объект класса Person
+        Person person = new Person("Иванов", 25, "Мужской", "ivanov@example.com");
+
+        // Выводим информацию о созданном объекте в консоль
+        System.out.println(person.toString());
+
+        // Возвращаем сообщение об успешном создании объекта
+        return "Объект Person успешно создан.";
+    }
+
+
 }
