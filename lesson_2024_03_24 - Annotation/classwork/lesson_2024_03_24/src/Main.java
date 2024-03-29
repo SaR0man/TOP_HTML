@@ -100,6 +100,7 @@ public class Main {
             if (annotation instanceof Mammals) {
                 Mammals mammals = (Mammals) annotation;
                 for (Mammal mammal : mammals.value()) {
+                    mammal = (Mammal) mammal;
                         System.out.println("Котик издает звук: " + mammal.sound());
                         System.out.println("Котик имеет цвет : " + mammal.color());
                 }
