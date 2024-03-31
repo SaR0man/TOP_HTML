@@ -3,8 +3,9 @@ package com.example.demo.models;
 import java.util.Date;
 
 public class Person {
-    private String name;
+    private static int nextId = 1; // статическая переменная для следующего доступного ID
     private int id;
+    private String name;
     private int age;
     private String phone;
     private Date birth;
@@ -14,40 +15,33 @@ public class Person {
     //// Конструкторы
 
     public Person() {
+        this.id = nextId++;
     }
-
     public Person(String name, int age, String gender, String email) {
+        this.id = nextId++; // присваиваем текущее значение nextId и увеличиваем его на 1
         this.name = name;
         this.age = age;
         this.gender = gender;
         this.email = email;
     }
 
-    public Person(String name, int id, int age, String phone, Date birth, String gender, String email) {
-        this.name = name;
-        this.id = id;
-        this.age = age;
+    public Person(String name, int age, String gender, String email, String phone, Date birth) {
+        this(name, age, gender, email); // вызываем основной конструктор для обязательных полей
         this.phone = phone;
         this.birth = birth;
-        this.gender = gender;
-        this.email = email;
     }
 
     //// Геттеры и сеттеры
+    public int getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public int getAge() {
@@ -94,8 +88,8 @@ public class Person {
     @Override
     public String toString() {
         return "Person{" +
-                "name='" + name + '\'' +
-                ", id=" + id +
+                " id=" + id +
+                ", name='" + name + '\'' +
                 ", age=" + age +
                 ", phone='" + phone + '\'' +
                 ", birth=" + birth +
