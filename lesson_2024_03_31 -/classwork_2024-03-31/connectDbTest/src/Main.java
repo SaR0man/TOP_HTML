@@ -37,9 +37,12 @@ public class Main {
             try(Connection connection = DriverManager.getConnection(url,username, password);) {
                 Statement statement = connection.createStatement();
 
-                // statement.executeUpdate() - drop, create, delete, update, insert - возвращает количество затронутых строк
-                // statement.executeQuery() - select - возвращает данные по запросу
-                // statement.execute() - это универсальный (.executeUpdate() и .executeQuery()), но не возвращает детали, а только true или false
+                /*
+                Пояснения к statement.xxxxxx():
+                - statement.executeUpdate() - drop, create, delete, update, insert - возвращает количество затронутых строк
+                - statement.executeQuery() - select - возвращает данные по запросу
+                - statement.execute() - это универсальный (.executeUpdate() и .executeQuery()), но не возвращает детали, а только true или false
+                */
 
 //                statement.executeUpdate(createQuery);
 //                System.out.println("Table Person was create success");
@@ -49,7 +52,6 @@ public class Main {
                 System.out.println("was deleted");
 
             }
-            Connection connection = DriverManager.getConnection(url,username, password);
             System.out.println("Connect to database");
         } catch (Exception e) {
             e.printStackTrace();
