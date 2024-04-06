@@ -10,7 +10,7 @@ age int
 
 insert into Person(name, surname, age)
 VALUES
-('John', 'Kennedy', 40),
+('Elvis', 'Presley', 40),
 ('Frank', 'Sinatra', 45),
 ('Mickle', 'Jackson', 35);
 
