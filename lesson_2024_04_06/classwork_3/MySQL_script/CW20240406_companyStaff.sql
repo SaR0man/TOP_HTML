@@ -1,23 +1,17 @@
-CREATE DATABASE CompanyStaff;
-USE CompanyStaff;
+CREATE DATABASE CW20240406_CompanyStaff;
+USE CW20240406_CompanyStaff;
 
-------
-
-CREATE TABLE Staff (
+CREATE TABLE Products (
 ID INT PRIMARY KEY AUTO_INCREMENT,
-Name VARCHAR(20),
-Surname VARCHAR(20),
-Position VARCHAR(20),
-Salary INT
+ProductName VARCHAR(50),
+Price DECIMAL(10, 2)
 );
 
-INSERT INTO Staff (Name, Surname, Position, Salary) VALUES
-('John', 'Doe', 'Manager', 60000),
-('Jane', 'Smith', 'Sales Associate', 45000),
-('Michael', 'Johnson', 'Software Engineer', 75000),
-('Emily', 'Williams', 'HR Specialist', 50000),
-('David', 'Brown', 'Financial Analyst', 65000);
+INSERT INTO Products (ProductName, Price) VALUES
+('Potato', 60),
+('Tomatoes', 45),
+('Carrot', 75);
 
--- DROP TABLE Staff;
--- SELECT * FROM Staff;
--- TRUNCATE Staff;
+-- DROP TABLE Products;
+-- SELECT * FROM Products;
+-- TRUNCATE Products;
