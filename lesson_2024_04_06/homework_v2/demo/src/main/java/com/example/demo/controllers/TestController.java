@@ -32,14 +32,6 @@ public class TestController {
         productServices.delete(id);
     }
 
-//    // Метод для изменения значений в строке таблицы Products
-//    @PutMapping("/updateProduct/{id}")
-//    public void updateProduct(@PathVariable int id,
-//                              @RequestParam String name,
-//                              @RequestParam double price) {
-//        productServices.update(id, name, price);
-//    }
-
     // Метод для изменения значений в строке таблицы Products
     @PutMapping("/updateProduct/{id}")
     public void updateProduct(@PathVariable int id,
