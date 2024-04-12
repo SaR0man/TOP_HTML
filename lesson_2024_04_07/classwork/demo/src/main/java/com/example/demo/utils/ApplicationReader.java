@@ -13,6 +13,12 @@ public class ApplicationReader {
     @Value("${db.password}")
     public static String dbPassword;
 
+    public void test() {
+        System.out.println(dbPath);
+        System.out.println(dbUsername);
+        System.out.println(dbPassword);
+    }
+
     //// геттеры + сеттеры:
     public static String getDbPath() {
         return dbPath;
