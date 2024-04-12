@@ -18,9 +18,7 @@ public class ProductServices {
             String username = "root";
             String password = "qwerty";
 
-            Statement statement;
             try(Connection connection = DriverManager.getConnection(url, username, password)) {
-                statement = connection.createStatement();
 
                 String insertQuery = """
                     INSERT INTO Products (ProductName, Price) VALUES (?, ?);
