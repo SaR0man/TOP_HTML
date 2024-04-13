@@ -7,11 +7,11 @@ import org.springframework.stereotype.Component;
 public class ApplicationReader {
 
     @Value("${db.url}")
-    public static String dbPath;
+    public String dbPath;
     @Value("${db.username}")
-    public static String dbUsername;
+    public String dbUsername;
     @Value("${db.password}")
-    public static String dbPassword;
+    public String dbPassword;
 
     public void test() {
         System.out.println(dbPath);
@@ -20,27 +20,27 @@ public class ApplicationReader {
     }
 
     //// геттеры + сеттеры:
-    public static String getDbPath() {
+    public String getDbPath() {
         return dbPath;
     }
 
-    public static void setDbPath(String dbPath) {
-        ApplicationReader.dbPath = dbPath;
+    public void setDbPath(String dbPath) {
+        this.dbPath = dbPath;
     }
 
-    public static String getDbUsername() {
+    public String getDbUsername() {
         return dbUsername;
     }
 
-    public static void setDbUsername(String dbUsername) {
-        ApplicationReader.dbUsername = dbUsername;
+    public void setDbUsername(String dbUsername) {
+        this.dbUsername = dbUsername;
     }
 
-    public static String getDbPassword() {
+    public String getDbPassword() {
         return dbPassword;
     }
 
-    public static void setDbPassword(String dbPassword) {
-        ApplicationReader.dbPassword = dbPassword;
+    public void setDbPassword(String dbPassword) {
+        this.dbPassword = dbPassword;
     }
 }

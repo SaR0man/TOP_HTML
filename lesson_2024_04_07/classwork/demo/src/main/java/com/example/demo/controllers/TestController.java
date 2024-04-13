@@ -13,9 +13,6 @@ public class TestController {
 
     ProductServices productServices;
 
-    @Autowired
-    ApplicationReader applicationReader;
-
     //// Конструктор класса
     public TestController(ProductServices productServices) {
         this.productServices = productServices;
@@ -24,7 +21,6 @@ public class TestController {
     //// Методы класса
     @PostMapping("/test")
     public void insertData(@RequestBody ProductDTO productDTO) {
-        applicationReader.test();
         productServices.create(productDTO);
 
     }
