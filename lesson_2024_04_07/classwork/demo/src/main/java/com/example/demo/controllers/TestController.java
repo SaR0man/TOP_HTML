@@ -2,6 +2,7 @@ package com.example.demo.controllers;
 
 import com.example.demo.models.ProductDTO;
 import com.example.demo.services.ProductServices;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -9,12 +10,13 @@ import org.springframework.web.bind.annotation.*;
 
 public class TestController {
 
+    @Autowired
     ProductServices productServices;
 
-    //// Конструктор класса
-    public TestController(ProductServices productServices) {
-        this.productServices = productServices;
-    }
+//    //// Конструктор класса
+//    public TestController(ProductServices productServices) {
+//        this.productServices = productServices;
+//    }
 
     //// Методы класса
     @PostMapping("/test")
