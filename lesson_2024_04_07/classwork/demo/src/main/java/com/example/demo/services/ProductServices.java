@@ -14,16 +14,9 @@ public class ProductServices {
     ApplicationReader applicationReader;
     public void create(ProductDTO productDTO) {
 
-        System.out.println(applicationReader.getDbPath());
-        System.out.println(applicationReader.getDbUsername());
-        System.out.println(applicationReader.getDbPassword());
-
         try {
             Class.forName("com.mysql.cj.jdbc.Driver").getDeclaredConstructor().newInstance();
             System.out.println("Connect success!");
-//            String url = "jdbc:mysql://localhost:3306/CW20240406_CompanyStaff";
-//            String username = "root";
-//            String password = "qwerty";
 
             try(Connection connection = DriverManager.getConnection(
                     applicationReader.dbPath,
