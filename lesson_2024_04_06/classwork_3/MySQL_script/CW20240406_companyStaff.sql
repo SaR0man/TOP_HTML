@@ -15,3 +15,6 @@ INSERT INTO Products (ProductName, Price) VALUES
 -- DROP TABLE Products;
 -- SELECT * FROM Products;
 -- TRUNCATE Products;
+
+-- SELECT * FROM Products WHERE ProductName = 'abc';DROP TABLE Products;#'
+
